@@ -1,3 +1,5 @@
+#use a CSV Reader to load up a list to hold the data to analyze.
+
 # Import the csv module
 import csv
 
@@ -21,6 +23,9 @@ print(crime_data[:10])
 
 
 
+
+#How many crimes are committed each month?
+
 # Import necessary modules
 from collections import Counter
 from datetime import datetime
@@ -41,6 +46,9 @@ for row in crime_data:
 print(crimes_by_month.most_common(3))
 
 
+
+
+# flip crime_data list into a dictionary keyed by month with a list of location values for each month, and filter down to the records for the year 2016. 
 
 # Import necessary modules
 from collections import defaultdict
@@ -64,6 +72,9 @@ print(locations_by_month)
 
 
 
+
+# Using the locations_by_month dictionary from the prior exercise, determine common crimes by month and location type.
+
 # Import Counter from collections
 from collections import Counter
 
@@ -77,6 +88,8 @@ for month, locations in locations_by_month.items():
     print(location_count.most_common(5))
 
 
+
+# use a DictReader to load up a dictionary to hold the data with the district as the key and the rest of the data in a list.
 
 # Create the CSV file: csvfile
 csvfile = open('crime_sampler.csv', 'r')
@@ -92,6 +105,9 @@ for row in csv.DictReader(csvfile):
     crimes_by_district[district].append(row)
 
 
+
+
+# determine the number arrests in each City district for each year.
 
 # Loop over the crimes_by_district using expansion as district and crimes
 for district, crimes in crimes_by_district.items():
@@ -113,6 +129,9 @@ for district, crimes in crimes_by_district.items():
     # Print the counter
     print(year_count)
 
+
+
+# get a unique list of crimes that have occurred on a couple of the blocks
 
 
 # Create a unique list of crimes for the first block: n_state_st_crimes
