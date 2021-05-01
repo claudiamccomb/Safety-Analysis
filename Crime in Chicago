@@ -1,5 +1,3 @@
-#use a CSV Reader to load up a list to hold the data to analyze.
-
 # Import the csv module
 import csv
 
