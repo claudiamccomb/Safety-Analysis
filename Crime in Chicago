@@ -57,9 +57,6 @@ locations_by_month = defaultdict(list)
 
 # Loop over the crime_data list
 for row in crime_data:
-    # Convert the first element to a date object
-    date = datetime.strptime(row[0], '%m/%d/%Y %I:%M:%S %p')
-    
     # If the year is 2016 
     if date.year == 2016:
         # Set the dictionary key to the month and append the location (fifth element) to the values list
@@ -130,22 +127,23 @@ for district, crimes in crimes_by_district.items():
 
 
 # get a unique list of crimes that have occurred on a couple of the blocks
+#potentially add for user to input block and compare safety?
 
 
 # Create a unique list of crimes for the first block: n_state_st_crimes
-n_state_st_crimes = set(crimes_by_block['001XX N STATE ST'])
+#n_state_st_crimes = set(crimes_by_block['001XX N STATE ST'])
 
 # Print the list
-print(n_state_st_crimes)
+#print(n_state_st_crimes)
 
 # Create a unique list of crimes for the second block: w_terminal_st_crimes
-w_terminal_st_crimes = set(crimes_by_block['0000X W TERMINAL ST'])
+#w_terminal_st_crimes = set(crimes_by_block['0000X W TERMINAL ST'])
 
 # Print the list
-print(w_terminal_st_crimes)
+#print(w_terminal_st_crimes)
 
 # Find the differences between the two blocks: crime_differences
-crime_differences = n_state_st_crimes.difference(w_terminal_st_crimes)
+#crime_differences = n_state_st_crimes.difference(w_terminal_st_crimes)
 
 # Print the differences
-print(crime_differences)
+#print(crime_differences)
